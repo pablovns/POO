@@ -1,3 +1,4 @@
+package Atividade3_3;
 public class Brinquedo {
     private String nome, faixaEtaria;
     private Float preco;

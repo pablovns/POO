@@ -2,7 +2,7 @@
 
 import javax.swing.JOptionPane;
 
-public class atividade1_3 {
+public class atividade3_1 {
     public static void main(String[] args) {
         Boolean[] assentos = {false, false, false, false, false, false, false, false, false, false};
         String[] opcoes = {"1 - Primeira Classe", "2 - Classe Econômica", "3 - Sair"};

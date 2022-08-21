@@ -1,26 +1,45 @@
-package Atividade3_3;
 public class Brinquedo {
-    private String nome, faixaEtaria;
-    private Float preco;
-    
-    public Brinquedo(String nome, String faixaEtaria, float preco) {
+    private String nome = "Indefinido", faixaEtaria = "Indefinido";
+    private Float preco = -1f;
+
+    public Brinquedo(String nome) {
+        // Método construtor da classe
         this.nome = nome;
-        this.faixaEtaria = faixaEtaria;
+	}
+
+    public Brinquedo(String nome, float preco) {
+        // Método construtor da classe
+        this.nome = nome;
         this.preco = preco;
+	}
+    
+    public Brinquedo(String nome, float preco, String faixaEtaria) {
+        // Método construtor da classe
+        this.nome = nome;
+        this.preco = preco;
+        this.faixaEtaria = faixaEtaria;
 	}
 
 	public void mostrar() {
-        System.out.printf("Nome: %s\nFaixa etária: %s\nPreço: %f", this.nome, this.faixaEtaria, this.preco);
+        System.out.printf("Nome: %s\nPreço: R$ %.2f\nFaixa etária: %s\n\n", this.getNome(), this.getPreco(),  this.getFaixaEtaria());
+    }
+    
+    public String getNome() {
+        return this.nome;
+    }
+    
+    public Float getPreco() {
+        return this.preco;
     }
 
     public String getFaixaEtaria() {
         return this.faixaEtaria;
     }
     
-    public Float getPreco() {
-        return this.preco;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    
+
     public void setPreco(Float preco) {
         this.preco = preco;
     }
@@ -28,6 +47,8 @@ public class Brinquedo {
     public void setFaixaEtaria(String faixaEtaria) {
         String[] valoresPermitidos = {"0-2", "3-5", "6-10", "10+"};
         
+
+        // Validação do parãmetro recebido
         boolean encontrado = false;
         for(String x : valoresPermitidos) {
             if(x == faixaEtaria) {
@@ -39,10 +60,11 @@ public class Brinquedo {
         if (encontrado) {
             this.faixaEtaria = faixaEtaria;
         } else {
-            System.out.println("O parâmetro fornecido não é válido.\nValores permitidos:\n");
+            System.out.println("O parâmetro fornecido não é válido.\nValores permitidos:");
             for (String x : valoresPermitidos) {
-                System.out.printf("\"%s\"", x);
+                System.out.printf("\"%s\"\n", x);
             }
+            System.out.println();
         }
     }   
 }

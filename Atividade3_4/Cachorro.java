@@ -4,6 +4,7 @@ public class Cachorro extends Animal {
     }
 
     public void latir() {
-        Animal.emitirSom("audio/dog-bark.wav");
+        System.out.println("**Cachorro latindo**");
+        super.emitirSom("audio/dog-bark.wav");
     }
 }

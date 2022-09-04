@@ -17,11 +17,15 @@ public class Animal {
             Clip clip = AudioSystem.getClip();
             clip.open(AudioSystem.getAudioInputStream(f));
             clip.start();
+
+            // reproduzir o áudio por 3000 milisegundos (3 segundos)
             try {
-                Thread.sleep(5000);
+                Thread.sleep(3000);
             } catch(InterruptedException ex) {
                 Thread.currentThread().interrupt();
             }
+
+            clip.stop();
         } catch (Exception e){
             System.out.println("Ocorreu um erro ao tentar reproduzir o áudio:");
             e.printStackTrace();

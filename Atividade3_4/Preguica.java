@@ -4,6 +4,7 @@ public class Preguica extends Animal {
     }
 
     public void gritar() {
-        Animal.emitirSom("audio/sloth-scream.wav");
+        System.out.println("**Preguiça gritando**");
+        super.emitirSom("audio/sloth-scream.wav");
     }
 }

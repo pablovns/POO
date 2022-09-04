@@ -5,7 +5,12 @@ import javax.sound.sampled.Clip;
 
 public class Animal {
     public String nome;
-    public Double idade;
+    public int idade;
+
+    public Animal(String nome, int idade) {
+		this.nome = nome;
+        this.idade = idade;
+	}
 
     /**
      * @param filePath deve ser um arquivo do tipo .wav

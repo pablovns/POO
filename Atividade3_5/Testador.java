@@ -8,5 +8,9 @@ public class Testador {
 
         Preguica preguica = new Preguica("Baiano", 5);
         preguica.emitirSom();
+
+        Veterinario.examinar(cachorro);
+        Veterinario.examinar(cavalo);
+        Veterinario.examinar(preguica);
     }
 }

@@ -7,12 +7,14 @@ public class ContaCorrente extends ContaBancaria {
     }
     
     public void depositar(Double quantia) {
+        System.out.printf("Depósito de R$ %d realizado. ", quantia);
         this.saldo += quantia;
+        System.out.printf("Saldo atual: %d\n", this.saldo);
     }
 
     public void sacar(Double quantia) {
         if (quantia > this.saldo + this.limite) {
-            System.out.printf("Limite batido. A quantia máxima que você pode sacar é %d\n", (this.limite - (Math.abs(this.saldo))));
+            System.out.printf("Limite atingido. A quantia máxima que você pode sacar é %d\n", (this.limite - (Math.abs(this.saldo))));
             return;
         }
         this.saldo -= quantia;

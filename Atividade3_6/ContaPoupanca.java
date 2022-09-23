@@ -1,4 +1,8 @@
 public class ContaPoupanca extends ContaBancaria {
+    /**
+     * deve estar em porcentagem, por exemplo:
+     * 3% = 0.03
+     */
     private Double taxaDeOperacao;
 
     public ContaPoupanca(Integer id, Double saldo, Double taxaDeOperacao) {
